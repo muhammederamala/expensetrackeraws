@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="padding: 50px;">
+    <h1>Expense Tracker</h1>
+    
+    <!-- Add Expense Button -->
+    <form onsubmit="expenseForm(event)">
+    <button id="expense-form" class="btn btn-primary">Add Expense</button>
+    </form>
+    <br><br>
+    <div id="premium-button-container">
+    </div>
+
+    <div id="leaderboard-button-container"></div>
+    <br>
+    <div id="user-list"></div>
+    <br>
+
+    <div>
+        <table id="monthlyReport" class="report-table">
+            <!-- Table contents will be inserted here -->
+        </table>
+    </div>
+    
+    <div>
+        <table id="yearlyReport" class="report-table">
+            <!-- Table contents will be inserted here -->
+        </table>
+    </div>
+
+    <div class='expenses-box'>
+    </div>
+    <button id="downloadHistory" class="btn btn-primary">View recent downloads</button>
+    <br><br>
+    <div id="pagination">
+        <button id="previous-button">Previous</button>
+        <button id="next-button">Next</button>
+        <label for="page-size-select">Page Size:</label>
+        <select id="page-size-select">
+            <option value="" selected disabled>Select</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="/expense/payment.js"></script>
+    <script src="/expense/report.js"></script>
+    <script src="/expense/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
